@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Valdio Renovations | Expert Home Renovations in GTA",
+  description: "Trusted home improvement company serving the GTA with 30+ years of experience. Expert flooring, kitchen and bathroom renovations, painting, and full interior upgrades.",
 };
 
 export default function RootLayout({
