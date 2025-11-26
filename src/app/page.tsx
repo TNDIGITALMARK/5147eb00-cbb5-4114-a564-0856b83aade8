@@ -1,6 +1,6 @@
 import Header from '@/components/valdio/Header';
 import Footer from '@/components/valdio/Footer';
-import { Phone, Star, MapPin, Paintbrush, Wrench, Bath, ChefHat } from 'lucide-react';
+import { Phone, Star, MapPin, Paintbrush, Wrench, Bath, ChefHat, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,8 +10,9 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative h-[600px] flex items-center justify-center text-white">
+        {/* Hero Section - Modern Redesign */}
+        <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center text-white overflow-hidden">
+          {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/generated/hero-kitchen.png"
@@ -20,28 +21,93 @@ export default function HomePage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,51%,25%)]/80 to-[hsl(210,51%,25%)]/40"></div>
+            {/* Gradient Overlay - Enhanced for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(210,51%,25%)]/90 via-[hsl(210,51%,25%)]/70 to-[hsl(210,51%,35%)]/60"></div>
+
+            {/* Animated Accent Lines */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[hsl(38,91%,55%)] to-transparent opacity-70"></div>
           </div>
 
-          <div className="container-valdio relative z-10 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Transform Your Home.<br />Trust Valdio Renovations.
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/95 max-w-2xl mx-auto">
-              30+ years of expert craftsmanship serving the Greater Toronto Area
-            </p>
-            <a
-              href="tel:6474464233"
-              className="inline-flex items-center gap-3 bg-[hsl(38,91%,55%)] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 hover:brightness-110 transition-all shadow-gold"
-            >
-              <Phone className="w-6 h-6" />
-              (647) 446-4233
-            </a>
+          <div className="container-valdio relative z-10 py-20">
+            <div className="max-w-4xl mx-auto">
+              {/* Trust Badge */}
+              <div className="flex justify-center mb-6 animate-in fade-in slide-in-from-top duration-500">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <Star className="w-4 h-4 text-[hsl(38,91%,55%)] fill-[hsl(38,91%,55%)]" />
+                  <span className="text-sm font-semibold">30+ Years of Excellence in GTA</span>
+                  <Star className="w-4 h-4 text-[hsl(38,91%,55%)] fill-[hsl(38,91%,55%)]" />
+                </div>
+              </div>
+
+              {/* Main Heading */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white text-center leading-tight animate-in fade-in slide-in-from-bottom duration-700">
+                Transform Your Home
+                <span className="block text-[hsl(38,91%,55%)] mt-2">Into Your Dream Space</span>
+              </h1>
+
+              {/* Subheading */}
+              <p className="text-lg sm:text-xl lg:text-2xl mb-10 text-white/95 max-w-3xl mx-auto text-center leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+                Expert renovation services for kitchens, bathrooms, flooring, and complete home makeovers.
+                Trusted by homeowners across the Greater Toronto Area.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-in fade-in slide-in-from-bottom duration-700 delay-400">
+                <a
+                  href="tel:6474464233"
+                  className="group inline-flex items-center gap-3 bg-[hsl(38,91%,55%)] text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-[hsl(38,91%,60%)] hover:scale-105 transition-all shadow-gold w-full sm:w-auto justify-center"
+                >
+                  <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                  Call (647) 446-4233
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-white text-[hsl(210,51%,25%)] px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-all w-full sm:w-auto justify-center group"
+                >
+                  Get Free Estimate
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              {/* Key Features Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom duration-700 delay-600">
+                <div className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <div className="w-12 h-12 rounded-full bg-[hsl(38,91%,55%)]/20 flex items-center justify-center mb-3">
+                    <Star className="w-6 h-6 text-[hsl(38,91%,55%)]" />
+                  </div>
+                  <h3 className="font-bold text-white mb-1">30+ Years</h3>
+                  <p className="text-sm text-white/80">Expert Craftsmanship</p>
+                </div>
+
+                <div className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <div className="w-12 h-12 rounded-full bg-[hsl(38,91%,55%)]/20 flex items-center justify-center mb-3">
+                    <MapPin className="w-6 h-6 text-[hsl(38,91%,55%)]" />
+                  </div>
+                  <h3 className="font-bold text-white mb-1">GTA Wide</h3>
+                  <p className="text-sm text-white/80">Local & Trusted</p>
+                </div>
+
+                <div className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <div className="w-12 h-12 rounded-full bg-[hsl(38,91%,55%)]/20 flex items-center justify-center mb-3">
+                    <Wrench className="w-6 h-6 text-[hsl(38,91%,55%)]" />
+                  </div>
+                  <h3 className="font-bold text-white mb-1">Full Service</h3>
+                  <p className="text-sm text-white/80">Complete Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+            </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="section-padding bg-white">
+        <section id="services" className="section-padding bg-white">
           <div className="container-valdio">
             <h2 className="text-center text-[hsl(210,51%,25%)] mb-12">Our Expert Services</h2>
 
