@@ -7,27 +7,42 @@
    ============================================ */
 
 :root {
-  /* VALDIO BRAND COLORS (Exact from design reference) */
-  /* Navy Primary: #1e3a5f → HSL(210, 51%, 25%) */
-  --color-navy-primary: 210 51% 25%;
+  /* VALDIO MODERN COLOR SYSTEM */
+  /* Deep Teal Primary: #0d4d4d → HSL(180, 66%, 18%) */
+  --color-primary-deep: 180 66% 18%;
 
-  /* Gold Accent: #f5a623 → HSL(38, 91%, 55%) */
-  --color-gold-accent: 38 91% 55%;
+  /* Rich Emerald: #1a7070 → HSL(180, 59%, 27%) */
+  --color-primary-rich: 180 59% 27%;
 
-  /* White: #ffffff → HSL(0, 0%, 100%) */
+  /* Vibrant Teal: #2d8a8a → HSL(180, 51%, 36%) */
+  --color-primary-vibrant: 180 51% 36%;
+
+  /* Warm Coral Accent: #e85d4a → HSL(8, 78%, 60%) */
+  --color-accent-coral: 8 78% 60%;
+
+  /* Deep Terracotta: #c74837 → HSL(8, 57%, 50%) */
+  --color-accent-deep: 8 57% 50%;
+
+  /* Soft Sage Background: #f4f7f5 → HSL(140, 20%, 96%) */
+  --color-bg-sage: 140 20% 96%;
+
+  /* Light Mint: #e8f3f0 → HSL(164, 35%, 92%) */
+  --color-bg-mint: 164 35% 92%;
+
+  /* Charcoal Text: #1a2b2b → HSL(180, 25%, 14%) */
+  --color-text-dark: 180 25% 14%;
+
+  /* Slate Gray: #556565 → HSL(180, 9%, 37%) */
+  --color-text-muted: 180 9% 37%;
+
+  /* Pure White: #ffffff → HSL(0, 0%, 100%) */
   --color-white: 0 0% 100%;
 
-  /* Light Gray: #e8e8e8 → HSL(0, 0%, 91%) */
-  --color-light-gray: 0 0% 91%;
-
-  /* Text Dark: #333333 → HSL(0, 0%, 20%) */
-  --color-text-dark: 0 0% 20%;
-
-  /* Icon Background: #d4e4f7 → HSL(212, 65%, 90%) */
-  --color-icon-bg: 212 65% 90%;
+  /* Soft Cream: #fafbfa → HSL(120, 20%, 98%) */
+  --color-cream: 120 20% 98%;
 
   /* THEME MAPPING FOR COMPONENTS */
-  --background: var(--color-white);
+  --background: var(--color-cream);
   --foreground: var(--color-text-dark);
 
   --card: var(--color-white);
@@ -36,38 +51,38 @@
   --popover: var(--color-white);
   --popover-foreground: var(--color-text-dark);
 
-  /* Primary = Navy Blue */
-  --primary: var(--color-navy-primary);
+  /* Primary = Deep Teal */
+  --primary: var(--color-primary-deep);
   --primary-foreground: var(--color-white);
 
-  /* Secondary = Gold Accent */
-  --secondary: var(--color-gold-accent);
+  /* Secondary = Coral Accent */
+  --secondary: var(--color-accent-coral);
   --secondary-foreground: var(--color-white);
 
-  --muted: var(--color-light-gray);
-  --muted-foreground: 0 0% 40%;
+  --muted: var(--color-bg-mint);
+  --muted-foreground: var(--color-text-muted);
 
-  --accent: var(--color-gold-accent);
+  --accent: var(--color-accent-coral);
   --accent-foreground: var(--color-white);
 
   --destructive: 0 70% 50%;
   --destructive-foreground: var(--color-white);
 
-  --border: var(--color-light-gray);
-  --input: var(--color-light-gray);
-  --ring: var(--color-navy-primary);
+  --border: var(--color-bg-mint);
+  --input: var(--color-bg-mint);
+  --ring: var(--color-primary-vibrant);
 
-  /* Border Radius (8px for buttons, 12px for cards) */
-  --radius: 0.5rem;
+  /* Border Radius (modern, softer curves) */
+  --radius: 0.75rem;
 
-  --sidebar-background: var(--color-navy-primary);
+  --sidebar-background: var(--color-primary-deep);
   --sidebar-foreground: var(--color-white);
-  --sidebar-primary: var(--color-gold-accent);
+  --sidebar-primary: var(--color-accent-coral);
   --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: 0 0% 30%;
+  --sidebar-accent: var(--color-primary-rich);
   --sidebar-accent-foreground: var(--color-white);
-  --sidebar-border: 0 0% 30%;
-  --sidebar-ring: var(--color-gold-accent);
+  --sidebar-border: var(--color-primary-rich);
+  --sidebar-ring: var(--color-accent-coral);
 }
 
 .dark {
@@ -390,9 +405,13 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Valdio CTA Button Shadow */
-.shadow-gold {
-  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
+/* Valdio CTA Button Shadow - Coral Glow */
+.shadow-coral {
+  box-shadow: 0 4px 16px rgba(232, 93, 74, 0.25);
+}
+
+.shadow-teal {
+  box-shadow: 0 4px 16px rgba(13, 77, 77, 0.15);
 }
 
 /* Utility Classes */
